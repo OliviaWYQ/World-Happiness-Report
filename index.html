@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+
+<head>
+	
+	<script type="text/javascript" src="https://d3js.org/d3.v4.min.js"></script>
+
+	<style type="text/css">
+
+		html, body {
+			margin: 0;
+			padding: 0;
+			background: black;
+	    }
+
+	    h1{
+	    	text-align:center;
+	    	color:white;
+	    	text-decoration: none;
+
+			font-weight:400;
+			text-transform: uppercase;
+			font-family: 'Source Code Pro';
+			letter-spacing:1.5px;
+			font-size:2.2em;
+	    }
+
+	    h4{
+	    	text-align:center;
+	    	color:white;
+	    	text-decoration: none;
+
+			font-weight:400;
+			text-transform: uppercase;
+			font-family: 'Source Code Pro';
+			letter-spacing:1.5px;
+			font-size:1.2em;
+	    }
+
+	    header{
+	    	padding: 30px;
+	    	text-align:center;
+	    	color:white;
+	    }
+
+	    footer{
+	    	padding: 50px;
+	    	text-align:center;
+	    	color:white;
+	    }
+
+	    #wrapper{
+	    	margin-left: 15%;
+	    	margin-right: 15%;
+	    }
+
+	    #bar{
+	    	background: #efefef;
+	    	height: 300px;
+	    	margin-bottom: 30px;
+	    }
+
+	    #radar{
+	    	background: #efefef;
+	    	height: 300px;
+	    	margin-bottom: 30px;
+	    }
+
+		#left{
+			float: left;
+		    width: 15%;
+		    height: 300px;
+		    background: #bfbfbf;
+		}
+
+		#middle{
+			float: left;
+			width: 60%;
+			height: 300px;
+			background: #efefef;
+		}
+
+		#right{
+			margin-left: 60%;
+			height: 300px;
+			background: #bfbfbf;
+		}
+
+	</style>
+
+</head>
+
+
+<body>
+
+	<header></header>
+
+	<div id="wrapper">
+		<h1>World Happiness</h1>
+
+		<h4>Summary</h4>
+
+		<div id="bar">bar chart</div>
+
+		<div id="radar">radar chart</div>
+
+		<div id="left">
+			<div id="buttons">
+				<div id = "button1"></div>
+				<div id = "button2"></div>
+				<div id = "button3"></div>
+				<div id = "button4"></div>
+				<div id = "button5"></div>
+			</div>
+		</div>
+		<div id="middle">
+			<div id = "chart">chart</div>
+		</div>
+
+		<div id="right">
+			<div id = "summary">summary</div>
+		</div>
+
+	</div>
+
+	<footer>All right reserved @ColumbiaDream.</footer>
+	
+</body>
+
+<script type="text/javascript">
+	
+	d3.selectAll('#button1').append('button').text('Health')
+	d3.selectAll('#button2').append('button').text('Education')
+	d3.selectAll('#button3').append('button').text('Economy')
+	d3.selectAll('#button4').append('button').text('Employment')
+	d3.selectAll('#button5').append('button').text('Government')
+
+	
+
+</script>
+
+</html>
