@@ -9,7 +9,7 @@
 		html, body {
 			margin: 0;
 			padding: 0;
-			background: black;
+			background: #111111;
 	    }
 
 	    h1{
@@ -53,6 +53,12 @@
 	    	margin-right: 15%;
 	    }
 
+	    #box{
+	    	margin-top: 50px;
+	    	margin-bottom: 50px;
+	    	text-align:center;
+	    }
+
 	    #bar{
 	    	background: #efefef;
 	    	height: 300px;
@@ -69,20 +75,66 @@
 			float: left;
 		    width: 15%;
 		    height: 300px;
-		    background: #bfbfbf;
+		    /*background: #bfbfbf;*/
+
+		    display: flex;
+    		justify-content: center;
 		}
 
 		#middle{
 			float: left;
 			width: 60%;
 			height: 300px;
-			background: #efefef;
+			/*background: #efefef;*/
 		}
 
 		#right{
-			margin-left: 60%;
+			margin-left: 80%;
 			height: 300px;
-			background: #bfbfbf;
+			/*background: #bfbfbf;*/
+		}
+
+		#country, #happiness, #index{
+			text-align:center;
+	    	color:white;
+	    	text-decoration: none;
+		}
+
+		#less{
+			float:left;
+			color:white;
+			width:200px;
+		}
+
+		#more{
+			color:white;
+			width:200px;
+			margin-left: 85%;
+		}
+
+		#buttons{
+			display: flex;
+            justify-content: center; 
+            align-items: center;     
+            flex-direction: column;
+		}
+
+		.button {
+			margin:10px;
+			padding: 10px 15px;
+			text-align: center;
+			text-decoration: none;
+			display: inline-block;
+			font-size: 14px;
+
+			background-color: #555555;
+    		color: white;
+		    border: 2px solid #555555;
+		}
+
+		.button:hover {
+			background-color: white;
+		    color: black;
 		}
 
 	</style>
@@ -97,11 +149,25 @@
 	<div id="wrapper">
 		<h1>World Happiness</h1>
 
-		<h4>Summary</h4>
+		<div id="box">
+			<h4>Introduction</h4>
+		</div>
+
+		<div id="box">
+			<h4>Chart1</h4>
+		</div>
 
 		<div id="bar">bar chart</div>
 
+		<div id="box">
+			<h4>Chart2</h4>
+		</div>
+
 		<div id="radar">radar chart</div>
+
+		<div id="box">
+			<h4>Chart3</h4>
+		</div>
 
 		<div id="left">
 			<div id="buttons">
@@ -112,12 +178,24 @@
 				<div id = "button5"></div>
 			</div>
 		</div>
+
+		
 		<div id="middle">
-			<div id = "chart">chart</div>
+			<div id = "chart3"></div>
+			<div id = "less">Lower Happiness Score</div>
+			<div id = "more">Higher Happiness Score</div>
 		</div>
 
 		<div id="right">
-			<div id = "summary">summary</div>
+			<div id="country">Country</div>
+			<div id="happiness"></div>
+			<div id="index"></div>
+		</div>
+
+
+		<div id="box">
+			<br>
+			<h4>Summary</h4>
 		</div>
 
 	</div>
@@ -128,14 +206,35 @@
 
 <script type="text/javascript">
 	
-	d3.selectAll('#button1').append('button').text('Health')
-	d3.selectAll('#button2').append('button').text('Education')
-	d3.selectAll('#button3').append('button').text('Economy')
-	d3.selectAll('#button4').append('button').text('Employment')
-	d3.selectAll('#button5').append('button').text('Government')
+	d3.selectAll('#button1').append('button').text('Health').attr("class", "button")
+	.attr('value', 'health_expenditure_per_person')
+	.classed('d_sel', true)
 
+	d3.selectAll('#button2').append('button').text('Education').attr("class", "button")
+	.attr('value', 'school_years')
+	.classed('d_sel', true)
+
+	d3.selectAll('#button3').append('button').text('Economy').attr("class", "button")
+	.attr('value', 'gdp_per_capita')
+	.classed('d_sel', true)
+
+	d3.selectAll('#button4').append('button').text('Employment').attr("class", "button")
+	.attr('value', 'employment_rate')
+	.classed('d_sel', true)
+
+	d3.selectAll('#button5').append('button').text('Government').attr("class", "button")
+	.attr('value', 'government_effectiveness')
+	.classed('d_sel', true)
+
+	var width = 750,
+		height = 250
+
+	var svg = d3.select('#chart').append('svg')
+			.attr('width', width)
+			.attr('height', height)
 	
 
 </script>
+<script type="text/javascript" src="chart3.js"></script>
 
 </html>
