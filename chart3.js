@@ -1,8 +1,7 @@
 
-var width = 700,
-	height = 300,
-	radius = 10;
-	padding = 100;
+var width = 700;
+var height = 300;
+var padding = 100;
 
 
 var svg = d3.select('#chart3').append('svg')

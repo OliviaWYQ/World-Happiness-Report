@@ -4,6 +4,8 @@
 	
 	<script type="text/javascript" src="https://d3js.org/d3.v4.min.js"></script>
 
+	<link rel="stylesheet" href="barstyle.css">
+	<script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
 	<style type="text/css">
 
 		html, body {
@@ -59,8 +61,8 @@
 	    	text-align:center;
 	    }
 
-	    #bar{
-	    	background: #efefef;
+	    #barchart{
+	    	/*background: #efefef;*/
 	    	height: 300px;
 	    	margin-bottom: 30px;
 	    }
@@ -154,19 +156,31 @@
 		</div>
 
 		<div id="box">
-			<h4>Chart1</h4>
+			<h2>Happiness Score Acrossing Regions</h1>
 		</div>
 
-		<div id="bar">bar chart</div>
+		<div id="barchart">
+			<div class="wrap">
+				<!-- <div class="holder"> -->
+				<div class="bar" data-percent="6.99"><span class="label second">NORTH AMERICA</span></div>
+				<div class="bar" data-percent="6.23"><span class="label ">SOUTH/LATIN AMERICA</span></div>
+				<div class="bar" data-percent="6.22"><span class="label">EUROPE</span></div>
+				<div class="bar" data-percent="5.47"><span class="label second">ASIA &#38; PACIFIC</span></div>
+				<div class="bar" data-percent="5.07"><span class="label">ARAB STATE</span></div>
+				<div class="bar" data-percent="4.48"><span class="label second">AFRICA</span></div>
+			</div>
+
+		</div>
+
 
 		<div id="box">
-			<h4>Chart2</h4>
+			<h2>Chart2</h2>
 		</div>
 
 		<div id="radar">radar chart</div>
 
 		<div id="box">
-			<h4>Chart3</h4>
+			<h2>Chart3</h2>
 		</div>
 
 		<div id="left">
@@ -196,6 +210,11 @@
 		<div id="box">
 			<br>
 			<h4>Summary</h4>
+		</div>
+
+		<div id="box">
+			<br>
+			<h4>Reference</h4>
 		</div>
 
 	</div>
@@ -235,6 +254,8 @@
 	
 
 </script>
+
+<script type="text/javascript" src="chart1.js"></script>
 <script type="text/javascript" src="chart3.js"></script>
 
 </html>
