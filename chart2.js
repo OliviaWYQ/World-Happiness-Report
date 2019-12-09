@@ -6,37 +6,37 @@ var datagroup = [
     {axis:"Health Expenditure",value:231},
     {axis:"School Years",value:10.2},
     {axis:"Employment Rate",value:92.1},
-    {axis:"Government Effectiveness",value:1.12},
+    {axis:"Government Effectiveness",value:-0.71},
   ],[//Arab States 48.3 1188.444444 12.88888889 90.26666667 0.553333333
     {axis:"Economic Sustainability",value:48.3},
     {axis:"Health Expenditure",value:1188},
     {axis:"School Years",value:12.9},
     {axis:"Employment Rate",value:90.3},
-    {axis:"Government Effectiveness",value:0.55},
+    {axis:"Government Effectiveness",value:-0.28},
   ],[//Asia & Pacific 51.305  1171.25 13.4  94.515  0.225
     {axis:"Economic Sustainability",value:51.3},
     {axis:"Health Expenditure",value:1171},
     {axis:"School Years",value:13.4},
     {axis:"Employment Rate",value:94.5},
-    {axis:"Government Effectiveness",value:0.23},
+    {axis:"Government Effectiveness",value:0.08},
   ],[//Europe 68.2825 2832.7  16.325  91.16 -0.369
     {axis:"Economic Sustainability",value:68.3},
     {axis:"Health Expenditure",value:2833},
     {axis:"School Years",value:16.3},
     {axis:"Employment Rate",value:91.2},
-    {axis:"Government Effectiveness",value:-0.37},
+    {axis:"Government Effectiveness",value:0.84},
   ],[//North America 76 9536  17  95.1  -0.74
     {axis:"Economic Sustainability",value:76.0},
     {axis:"Health Expenditure",value:9536},
     {axis:"School Years",value:17.0},
     {axis:"Employment Rate",value:95.1},
-    {axis:"Government Effectiveness",value:-0.74},
+    {axis:"Government Effectiveness",value:1.55},
   ],[//South/Latin America 51.74285714  1073.071429 13.92857143 92.76428571 -0.439285714
     {axis:"Economic Sustainability",value:51.7},
     {axis:"Health Expenditure",value:1073},
     {axis:"School Years",value:13.9},
     {axis:"Employment Rate",value:92.8},
-    {axis:"Government Effectiveness",value:-0.44},
+    {axis:"Government Effectiveness",value:-0.07},
   ],
   
 ];
