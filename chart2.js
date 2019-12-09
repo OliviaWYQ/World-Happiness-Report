@@ -97,8 +97,10 @@ var colors = ["#2c3e50","#85c1e9","#717d7e", "#1b4f72", "#922b21","#ca6f1e"]
 
 var maxValues = [];
 for(var i=0; i<data[0].length; i++){
-  maxValues.push(d3.max(data.map(d => d[i].value)));
+  maxValues.push(d3.max(data.map(d => d[i].value)).toFixed(2));
 }
+
+// console.log("maxValues", maxValues);
 
 var axesDomain = data[0].map(d => d.axis)
 
@@ -133,6 +135,7 @@ var angleSlice = Math.PI * 2 / axesLength
 
 var rScale = maxValues.map(el => d3.scaleLinear().domain([0, el]).range([0, radius]))
 
+// console.log("rScale", rScale)
 
 var color = function(){
   let index1 = team[dataSelect1];
@@ -176,7 +179,7 @@ axisGrid.selectAll(".axisLabel")
    .attr("dy", "0.4em")
    .style("font-size", "12px")
    .attr("fill", "white")
-   .text(function(d,i) {return Object.values(maxValues)[0] * d/levels; });
+   .text(function(d,i) {return (Object.values(maxValues)[0] * d/levels).toFixed(2); });
 
 const axis = axisGrid.selectAll(".axis")
   .data(axesDomain)
@@ -211,6 +214,16 @@ var radarLine = d3.lineRadial()
 
 
 function draw(){
+
+  var maxValues = [];
+  for (var i = 0; i < data[0].length; i++) {
+    maxValues.push(d3.max(data.map(d => d[i].value)).toFixed(2));
+  }
+  
+  d3.selectAll(".axisLabel")
+    .text(function (d, i) {
+      return (Object.values(maxValues)[0] * d / levels).toFixed(2);
+    });
 
   const plots = container.append('g')
     .selectAll('g')
