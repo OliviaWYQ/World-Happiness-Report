@@ -3,8 +3,10 @@
 <head>
 	
 	<script type="text/javascript" src="https://d3js.org/d3.v4.min.js"></script>
+	<!-- <script type="text/javascript" src="https://d3js.org/d3.v5.min.js"></script> -->
 
 	<link rel="stylesheet" href="barstyle.css">
+	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon"/>
 	<script src='jquery.min.js'></script>
 
 	<style type="text/css">
@@ -19,7 +21,6 @@
 	    	text-align:center;
 	    	color:white;
 	    	text-decoration: none;
-
 			font-weight:400;
 			text-transform: uppercase;
 			font-family: 'Source Code Pro';
@@ -31,12 +32,21 @@
 	    	text-align:center;
 	    	color:white;
 	    	text-decoration: none;
-
 			font-weight:400;
 			text-transform: uppercase;
 			font-family: 'Source Code Pro';
 			letter-spacing:1.5px;
 			font-size:1.2em;
+	    }
+
+	    h5{
+	    	color:white;
+	    	text-decoration: none;
+	    	font-weight:100;
+			text-transform: uppercase;
+			font-family: 'Source Code Pro';
+			letter-spacing:1.5px;
+			font-size:1em;
 	    }
 
 	    header{
@@ -69,8 +79,9 @@
 	    }
 
 	    #radar{
-	    	background: #efefef;
-	    	height: 300px;
+	    	/*background: #efefef;*/
+	    	height: 650px;
+	    	/*width: 800px;*/
 	    	margin-bottom: 30px;
 	    }
 
@@ -78,8 +89,6 @@
 			float: left;
 		    width: 15%;
 		    height: 300px;
-		    /*background: #bfbfbf;*/
-
 		    display: flex;
     		justify-content: center;
 		}
@@ -140,6 +149,22 @@
 		    color: black;
 		}
 
+		.custom-select {
+			position: relative;
+			font-family: Arial;
+			font-size: 12px;
+			margin-right: 15px;
+		}
+
+		.custom-select select {
+		  display: none; /*hide original SELECT element:*/
+		}
+
+		#selection {
+			margin-bottom: 30px;
+		}
+
+
 	</style>
 
 </head>
@@ -178,7 +203,12 @@
 			<h2>Chart2</h2>
 		</div>
 
-		<div id="radar">radar chart</div>
+		<div id="selection">
+			<h5>Select &nbsp;Countries:</h5>
+		</div>
+		
+
+		<div id="radar"></div>
 
 		<div id="box">
 			<h2>Chart3</h2>
@@ -246,17 +276,19 @@
 	.attr('value', 'government_effectiveness')
 	.classed('d_sel', true)
 
-	var width = 750,
-		height = 250
+	// var width = 750,
+	// 	height = 250
 
-	var svg = d3.select('#chart').append('svg')
-			.attr('width', width)
-			.attr('height', height)
+	// var svg = d3.select('#chart').append('svg')
+	// 		.attr('width', width)
+	// 		.attr('height', height)
 	
 
 </script>
 
 <script type="text/javascript" src="chart1.js"></script>
+<script type="text/javascript" src="chart2.js"></script>
 <script type="text/javascript" src="chart3.js"></script>
+
 
 </html>

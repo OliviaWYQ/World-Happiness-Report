@@ -4,7 +4,7 @@ var height = 300;
 var padding = 100;
 
 
-var svg = d3.select('#chart3').append('svg')
+var svg3 = d3.select('#chart3').append('svg')
 			.attr('width', width)
 			.attr('height', height)
 
@@ -39,7 +39,7 @@ d3.csv('country_happiness.csv', function(data){
 		.style("stroke", "white");
 
 		d3.select("#country").text("Country:"+d.country);
-		d3.select("#happiness").text("Rank:"+d.index);
+		d3.select("#happiness").text("Rank:"+parseInt(d.index+1));
 		d3.select("#index").text(selected_variable+":"+d[selected_variable]);
 	    
 	};
@@ -62,7 +62,7 @@ d3.csv('country_happiness.csv', function(data){
 	}
 
 
-	var circles = svg.selectAll('.circ')
+	var circles = svg3.selectAll('.circ')
 		.data(data)
 		.enter().append('circle').classed('circ', true)
 		.attr('r', function(d) { return radiusScale(d.population); })
