@@ -31,7 +31,24 @@ d3.csv('country_happiness.csv', function(data){
 
 
 	// a function to highlight points when clicked
-	
+
+	var handleClick = function (d) {
+
+		var bubble_click = d3.select(this);
+
+		if (bubble_click.on("mouseout")==null) {
+			bubble_click.on("mouseout", removeHighlight);
+		}else{
+			bubble_click.on("mouseout", null);
+		}
+			
+		d3.select("#country").text("Country:" + d.country);
+		d3.select("#happiness").text("Rank:" + parseInt(d.index + 1));
+		d3.select("#index").text(selected_variable + ":" + d[selected_variable]);
+
+	};
+
+
 	var toggleHighlight = function(d){
 		
         d3.select(this)
@@ -45,10 +62,14 @@ d3.csv('country_happiness.csv', function(data){
 	};
 
 	var removeHighlight = function(d){
-	        
-        d3.select(this)
-        .style("stroke-width", 0.5)
-		.style("stroke", "black");
+		var bubble = d3.select(this);
+		
+		if (bubble.on("mouseout")!=null){
+			bubble.transition().delay(100)
+				.style("stroke-width", 0.5)
+				.style("stroke", "black");
+		}
+
 	};
 
 	// set domain for selected variable
@@ -71,6 +92,7 @@ d3.csv('country_happiness.csv', function(data){
 		.attr("fill", function(d) { return scaleColor(d.world_happiness_score_scaled); })
 		.attr("stroke", "black")
 		.attr("stroke-width", 0.5)
+		.on('click', handleClick)
 		.on('mouseover', toggleHighlight)
 		.on("mouseout", removeHighlight);
 
