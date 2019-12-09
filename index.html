@@ -50,13 +50,13 @@
 	    }
 
 	    header{
-	    	padding: 30px;
+	    	padding: 25px;
 	    	text-align:center;
 	    	color:white;
 	    }
 
 	    footer{
-	    	padding: 50px;
+	    	padding: 25px;
 	    	text-align:center;
 	    	color:white;
 	    }
@@ -164,6 +164,25 @@
 			margin-bottom: 30px;
 		}
 
+		.demo {
+			perspective: 1px; 
+			padding: 0; 
+			height: calc(100vh - 100px); 
+			overflow: auto;
+		}
+		.demo_box {
+			height: 2000px;
+			transform-style: preserve-3d;
+			position: relative;
+		}
+
+		.pic {
+			position: absolute; 
+			top: 25%;
+			left: 50%;
+			transform: translate3D(-50%, -120px, -1px) scale(1.5);
+		}
+
 
 	</style>
 
@@ -172,13 +191,21 @@
 
 <body>
 
-	<header></header>
+<header></header>
+
+<div class="demo">
+	<div class="demo_box">
+		<div class="pic">
+			<img src="map6.jpg" class="pic">
+		</div>
 
 	<div id="wrapper">
 		<h1>World Happiness</h1>
 
 		<div id="box">
 			<h4>Introduction</h4>
+			<br>
+			<br>
 		</div>
 
 		<div id="box">
@@ -200,7 +227,7 @@
 
 
 		<div id="box">
-			<h2>Chart2</h2>
+			<h2>Radar Chart</h2>
 		</div>
 
 		<div id="selection">
@@ -211,7 +238,7 @@
 		<div id="radar"></div>
 
 		<div id="box">
-			<h2>Chart3</h2>
+			<h2>Bubble Chart</h2>
 		</div>
 
 		<div id="left">
@@ -241,18 +268,26 @@
 		<div id="box">
 			<br>
 			<h4>Summary</h4>
+			<br>
+			<br>
 		</div>
 
 		<div id="box">
 			<br>
 			<h4>Reference</h4>
+			<br>
+			<br>
 		</div>
 
 	</div>
 
 	<footer>All right reserved @ColumbiaDream.</footer>
 	
+	</div>
+</div>
+<footer></footer>
 </body>
+
 
 <script type="text/javascript">
 	
