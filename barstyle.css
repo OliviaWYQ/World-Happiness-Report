@@ -33,7 +33,7 @@ h2 {
   margin-left:15%;
 }
 .bar {
-  background: #ff413d;
+  /* background: #ff413d; */
   width: 0;
   margin: .35em 0;
   color: #fff;
@@ -42,9 +42,29 @@ h2 {
   -webkit-transform: translate3d(0, 0, 0);
   clear: both;
 }
-.bar:nth-of-type(odd) {
+/* .bar:nth-of-type(odd) {
   background: #ff6461;
+} */
+
+.one{
+  background:#FFF9C4;
 }
+.two{
+  background:#FFF176;
+}
+.three{
+  background:#FDD835;
+}
+.four{
+  background:#FFA000;
+}
+.five{
+  background:#EF6C00;
+}
+.six{
+  background:#BF360C;
+}
+
 .bar .label {
   font-size: .75em;
   padding: 1em;

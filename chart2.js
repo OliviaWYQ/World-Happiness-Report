@@ -25,19 +25,19 @@ var datagroup = [
     {axis:"School Years",value:16.3},
     {axis:"Employment Rate",value:91.2},
     {axis:"Government Effectiveness",value:0.84},
-  ],[//North America 76 9536  17  95.1  -0.74
-    {axis:"Economic Sustainability",value:76.0},
-    {axis:"Health Expenditure",value:9536},
-    {axis:"School Years",value:17.0},
-    {axis:"Employment Rate",value:95.1},
-    {axis:"Government Effectiveness",value:1.55},
   ],[//South/Latin America 51.74285714  1073.071429 13.92857143 92.76428571 -0.439285714
     {axis:"Economic Sustainability",value:51.7},
     {axis:"Health Expenditure",value:1073},
     {axis:"School Years",value:13.9},
     {axis:"Employment Rate",value:92.8},
     {axis:"Government Effectiveness",value:-0.07},
-  ],
+  ],[//North America 76 9536  17  95.1  -0.74
+    {axis:"Economic Sustainability",value:76.0},
+    {axis:"Health Expenditure",value:9536},
+    {axis:"School Years",value:17.0},
+    {axis:"Employment Rate",value:95.1},
+    {axis:"Government Effectiveness",value:1.55},
+  ]
   
 ];
 
@@ -45,9 +45,9 @@ var datagroup = [
 var dataSelect1 = "Africa";
 var dataSelect2 = "Europe";
 
-var selectdata1 = ["Africa", "Arab States", "Asia & Pacific", "Europe", "North America", "South America"]
+var selectdata1 = ["Africa", "Arab States", "Asia & Pacific", "Europe", "South America", "North America", ]
 
-var selectdata2 = ["Europe", "North America", "South America", "Africa", "Arab States", "Asia & Pacific"]
+var selectdata2 = ["Europe", "South America", "North America", "Africa", "Arab States", "Asia & Pacific"]
 
 var select1 = d3.select('#selection')
   .append('select')
@@ -83,7 +83,14 @@ function onchange() {
   draw();
 };
 
-var team = {"Africa":0, "Arab States":1, "Asia & Pacific":2, "Europe":3, "North America":4, "South America":5}
+var team = {
+  "Africa": 0,
+  "Arab States": 1,
+  "Asia & Pacific": 2,
+  "Europe": 3,
+  "South America": 4,
+  "North America": 5,
+}
 
 var data = [datagroup[team[dataSelect1]], datagroup[team[dataSelect2]]];
 
@@ -93,7 +100,9 @@ var data_teams = [dataSelect1, dataSelect2];
 
 // console.log("data_teams", data_teams)
 
-var colors = ["#2c3e50","#85c1e9","#717d7e", "#1b4f72", "#922b21","#ca6f1e"]
+// var colors = ["#2c3e50","#85c1e9","#717d7e", "#1b4f72", "#922b21","#ca6f1e"]
+
+var colors = ["#BF360C", "#EF6C00", "#FFA000", "#FDD835", "#FFF176", "#FFF9C4"];
 
 var maxValues = [];
 for(var i=0; i<data[0].length; i++){
@@ -165,8 +174,8 @@ axisGrid.selectAll(".levels")
    .enter().append("circle")
     .attr("class", "gridCircle")
     .attr("r", (d, i) => radius/axisCircles*d)
-    .style("fill", "#D6EAF8")
-    .style("stroke", "#D6EAF8")
+    .style("fill", "#CFD8DC")
+    .style("stroke", "#CFD8DC")
     .style("fill-opacity", 0.5);
 
 axisGrid.selectAll(".axisLabel")
@@ -231,7 +240,7 @@ function draw(){
     // .join('g')
     .enter().append('g')
     .attr("fill", "none")
-    .attr("stroke", "steelblue")
+    .attr("stroke", "#607D8B")
     .attr("class", "plotcircle");
 
    plots.append('path')
