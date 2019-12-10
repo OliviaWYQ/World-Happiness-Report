@@ -65,9 +65,8 @@ d3.csv('country_happiness.csv', function(data){
 		var bubble = d3.select(this);
 		
 		if (bubble.on("mouseout")!=null){
-			bubble.transition().delay(100)
-				.style("stroke-width", 0.5)
-				.style("stroke", "black");
+			bubble.transition().delay(30)
+			.style("stroke-width", 0.5).style("stroke", "black");
 		}
 
 	};
