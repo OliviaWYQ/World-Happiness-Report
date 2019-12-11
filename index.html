@@ -92,7 +92,8 @@
 		    width: 15%;
 		    height: 300px;
 		    display: flex;
-    		justify-content: center;
+			justify-content: center;
+			overflow: hidden;
 		}
 
 		#middle{
@@ -103,21 +104,32 @@
 		}
 
 		#right{
-			margin-left: 80%;
+			margin-left: 60%;
 			height: 300px;
 			/*background: #bfbfbf;*/
 		}
 
 		#other{
-	    	background: #efefef;
+	    	/* background: #efefef; */
 			display: flex;
 			align-items: center;
-  			justify-content: center;
-	    	height: 300px;
+			justify-content: center;
+			flex-direction: row;
+	    	height: 400px;
 	    	width: 800px;
 	    	margin-bottom: 30px;
 			margin:auto;
-	    }
+		}
+		
+		#happy_left{
+			width: 400px;
+			margin: 20px;
+		}
+
+		#happy_right{
+			width: 400px;
+			margin: 20px;
+		}
 
 		#country, #happiness, #index{
 			text-align:center;
@@ -129,6 +141,7 @@
 			float:left;
 			color:white;
 			width:200px;
+			overflow: hidden;
 		}
 
 		#more{
@@ -170,7 +183,7 @@
 		}
 
 		.custom-select select {
-		  display: none; /*hide original SELECT element:*/
+		  	display: none; /*hide original SELECT element:*/
 		}
 
 		#selection {
@@ -194,6 +207,53 @@
 			top: 25%;
 			left: 50%;
 			transform: translate3D(-50%, -120px, -1px) scale(1.5);
+		}
+
+		.axis {
+			fill: none;
+			stroke: white;
+			shape-rendering: crispEdges;
+		}
+
+		.axis path,
+		.axis line {
+			fill: none;
+			stroke: white;
+			shape-rendering: crispEdges;
+		}
+
+		.dot {
+			stroke: black;
+			stroke-width: 0.3px;
+		}
+		.tooltip {
+			/* position: absolute; */
+			/* display: block; */
+			/* float:left; */
+			font-size: 14px;
+			/* width: auto;
+			height: auto; */
+			color: white;
+			/* pointer-events: none; */
+			/* background-color:gray;  */
+		}
+
+		#tips{
+			margin-top:10px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			flex-direction: row;
+		}
+
+		#tip1{
+			height:50px;
+			width:450px;
+		}
+
+		#tip2{
+			height:50px;
+			width:400px;
 		}
 
 
@@ -235,9 +295,7 @@
 				<div class="bar five" data-percent="5.07"><span class="label second">ARAB STATE</span></div>
 				<div class="bar six" data-percent="4.48"><span class="label ">AFRICA</span></div>
 			</div>
-
 		</div>
-
 
 		<div id="box">
 			<h2>Social Progress Level Across Regions</h2>
@@ -283,7 +341,20 @@
 			<h2>Other Factors Influencing Happiness</h2>
 		</div>
 
-		<div id="other">chart4</div>
+		<div id="other">
+			<div id="happy_left">
+				<div id="vis-container"></div>	
+			</div>
+			<div id="happy_right">
+				<div id="vis-container2"></div>
+			</div>
+		</div>
+		
+		<div id="tips">
+			<div id="tip1"></div>
+			<div id="tip2"></div>
+		</div>
+		
 
 		<div id="box">
 			<br>
@@ -346,6 +417,8 @@
 <script type="text/javascript" src="chart1.js"></script>
 <script type="text/javascript" src="chart2.js"></script>
 <script type="text/javascript" src="chart3.js"></script>
+<script type="text/javascript" src="coffee.js"></script>
+<script type="text/javascript" src="urban.js"></script>
 
 
 </html>
