@@ -204,7 +204,7 @@
 
 		.pic {
 			position: absolute; 
-			top: 25%;
+			top: 75%;
 			left: 50%;
 			transform: translate3D(-50%, -120px, -1px) scale(1.5);
 		}
@@ -247,13 +247,72 @@
 		}
 
 		#tip1{
+			margin-left:40px;
 			height:50px;
-			width:450px;
+			width:400px;
 		}
 
 		#tip2{
+			margin-left:40px;
 			height:50px;
 			width:400px;
+		}
+
+		.paragraph{
+			color:white;
+			font-size: 16px;
+			font-family: Helvetica, sans-serif;
+			text-align: justify;	
+			width: 70%;
+			margin-left: 15%;
+			letter-spacing: 0.5px;
+			word-spacing: 1px;
+			line-height:1.5em;
+		}
+
+		.paragraph2{
+			color:white;
+			font-size: 16px;
+			font-family: Helvetica, sans-serif;
+			text-align: justify;	
+			width: 70%;
+			margin-left: 15%;
+			letter-spacing: 0.5px;
+			word-spacing: 1px;
+			line-height:1.5em;
+		}
+
+		dd{
+			width:90%;
+			margin-bottom: 1em;
+		}
+
+		.paragraph p:first-child::first-letter{
+			color: #c69c6d; 
+			float: left; 
+			font-size: 2.8em; 
+			margin: .3em .2em 0 0; 
+		}
+
+		a {
+			color: hotpink;
+			margin-left: 15px;
+		}
+
+		a:link {
+			text-decoration: none;
+		}
+
+		a:visited {
+			text-decoration: none;
+		}
+
+		a:hover {
+			text-decoration: underline;
+		}
+
+		a:active {
+			text-decoration: underline;
 		}
 
 
@@ -278,7 +337,24 @@
 		<div id="box">
 			<h4>Introduction</h4>
 			<br>
-			<br>
+			<div class="paragraph">
+				<p>The world has evolved drastically over the course of humanity. With the wealth of resources and the advent of technology
+				among many other, humanity as a whole has become more affluent in the past decades. As humanity has progressed and
+				become wealthier, and the concern of putting food on the table is less of a concern, there has been a growing demand and
+				desire for the wellbeing and happiness level of humans.</p>
+				<p>Each year, the United Nations surveys 155 countries of the state of their citizens' happiness levels as a part of their
+				annual World Happiness Report. Specifically, the metrics that the UN use to proxy the happiness level are: GDP per
+				Capita, Family, Life Expectancy, Freedom, Generosity, Trust, and Government Corruption.</p>
+				On top of what the UN uses to measure happiness, our team has incorporated data that unveils the level of social
+				progress in relation to happiness: <b>Economy</b> (Economic Sustainability), <b>Government</b> (Government Effectiveness), <b>Health</b>
+				(Health Expenditure), <b>Employment</b> (Employment Rate), and <b>Education</b> (School Years).</p>
+				<p>Furthermore, we have included various other factors outside of the more intuitive factors that contribute to a country's
+				happiness. Through the following four data visualizations, we have aimed to portray the following: </p>
+				<dd> (1) Average happiness levels of citizens in each country;</dd>
+				<dd> (2) Comparison across each continent's 5 social progress metrics; </dd>
+				<dd> (3) The degree of social progress per country, encoding happiness via color; </dd>
+				<dd> (4) Other factors such as coffee consumption and urban population percentage that may have a correlation with the level of happiness.</dd>
+			</div>
 		</div>
 
 		<div id="box">
@@ -360,16 +436,32 @@
 			<br>
 			<h4>Summary</h4>
 			<br>
-			<br>
+			<div class="paragraph2">
+				<p>
+				Through our initial exploratory data analysis as well as the final data visualization, we have discovered that countries in North America has the highest level of happiness score, followed by South America and Europe, nearly tieng as number 2. The continent with the lowest overall happiness score is Africa, where the difference between that of North America is approximately 2.5.
+				</p><p>
+				Our radial chart is more interactive, allowing the audience to compare the five different metrics of social progress across different continents. Through this second data visualization, the audience can gain further insights beyond what the first data vis can provide, as it allows the audience to see that although Africa and North America are on the opposite ends of the happiness spectrum, they nevertheless have a very small difference in their employment rate. 
+				</p><p>
+				The third data vis, level of happiness and social progress categorized by country, allows the audience to see the individual countries' place in each metric while also easily tracking their happiness score through an encoded color gradiation. An interesting insight is that Singapore, which ranks 2nd in highest GDP per capita across all nations, ranks 24th in happiness; similarly, Kuwait, ranking 3rd in highest GDP per capita, has a happiness ranking of 39. However, through the color encoding, the audience can easily see an overall pattern of color gradient following the level of social progress; countries encoded with lighter colors are on the right end, while countries encoded with darker colors are on the left end. In other words, high social progress has high happiness.
+				</p><p>
+				Looking further into the top few countries (Scandinavian countries) that consistently rank the highest in happiness, we have conducted research to understand what the cultural factors that contribute to such extraordinary consistent performance might be. We have gained an insight that many countries in the Scandinavian countries have a culturally mandatory social hour ingrained in their daily lives. For instance, <i>Swede's fika</i> is a time when even at workplaces the employees go out in the middle of the day to take a relaxing coffee and cake break. Thus, we have decided to look into the coffee consumption to see its correlation with happiness. We have also further looked into the connection between social progress and urbanization. More and more countries nowadays have growing urban populations to support the development of their social progress in various aspects such as market growth, education resources, working environment and even healthcare issues. Based on such observation, we were curious to see whether these countries having higher percentages of urban population may also show higher happiness scores since they may be more developed with regard to social progress, and have discovered a positive correlation.
+				</p><p>
+				Overall, we have come to understanding that happiness is a very nuanced and intricate topic to understand. No set number of factors can directly contribute to a higher happiness level. At the end of the day, we want our audience to leave with an understanding that happiness has multiple complicated factors that play a role into it, and that perhaps what is most important is to have a firm understanding of their definitions of happiness and what factors contribute to their own wellness.
+				</p>
+			</div>
 		</div>
 
 		<div id="box">
 			<br>
 			<h4>Reference</h4>
 			<br>
-			<br>
+			<dd>
+				<a href="https://www.kaggle.com/unsdsn/world-happiness">Dataset of the world happiness report</a>
+			</dd>
+			<dd>
+				<a href="https://worldhappiness.report/download/">Documents of the world happiness report</a>
+			</dd>					
 		</div>
-
 	</div>
 
 	<footer>
