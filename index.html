@@ -386,6 +386,13 @@
 
 		<div id="box">
 			<h2>Happiness And Social Progress By Country</h2>
+			<br>
+			<div class="paragraph2">
+				Hover the mouse on a circle to see details. Click on circles to track or compare them.
+			</div>
+			<div>
+				<svg id="legend" height=50 width=700></svg>
+			</div>
 		</div>
 
 		<div id="left">
@@ -414,7 +421,14 @@
 		<div id="box">
 			<br>
 			<br>
-			<h2>Other Factors Influencing Happiness</h2>
+			<h2>Other Factors Relating to Happiness</h2>
+			<br>
+			<div class="paragraph2">
+				Hover the mouse on a circle to see details.
+			</div>
+			<div>
+				<svg id="legend2" height=70 width=700></svg>
+			</div>
 		</div>
 
 		<div id="other">
@@ -521,6 +535,42 @@
 	// var svg = d3.select('#chart').append('svg')
 	// 		.attr('width', width)
 	// 		.attr('height', height)
+
+
+	var legend = d3.select("#legend")
+
+	legend.append("circle").attr("cx", 210).attr("cy", 30).attr("r", 6).style("fill", "#000004")
+	legend.append("circle").attr("cx", 230).attr("cy", 30).attr("r", 6).style("fill", "#420f75")
+	legend.append("circle").attr("cx", 250).attr("cy", 30).attr("r", 6).style("fill", "#651a80")
+	legend.append("circle").attr("cx", 270).attr("cy", 30).attr("r", 6).style("fill", "#732081")
+	legend.append("circle").attr("cx", 290).attr("cy", 30).attr("r", 6).style("fill", "#ae347b")
+	legend.append("circle").attr("cx", 310).attr("cy", 30).attr("r", 6).style("fill", "#cf4070")
+	legend.append("circle").attr("cx", 330).attr("cy", 30).attr("r", 6).style("fill", "#f05f5e")
+	legend.append("circle").attr("cx", 350).attr("cy", 30).attr("r", 6).style("fill", "#f97b5d")
+	legend.append("circle").attr("cx", 370).attr("cy", 30).attr("r", 6).style("fill", "#feb27a")
+	legend.append("circle").attr("cx", 390).attr("cy", 30).attr("r", 6).style("fill", "#fcfdbf")
+
+	legend.append("text").attr("x", 10).attr("y", 30).text("LOW HAPPINESS SCORE -> ").style("font-size", "15px").attr("alignment-baseline", "middle").style("fill", "white")
+	legend.append("text").attr("x", 405).attr("y", 30).text(" -> HIGH HAPPINESS SCORE").style("font-size", "15px").attr("alignment-baseline", "middle").style("fill", "white")
+
+	// select the svg area
+	var legend2 = d3.select("#legend2")
+
+	// Handmade legend
+	legend2.append("circle").attr("cx", 10).attr("cy", 30).attr("r", 5.5).style("fill", "rgb(148, 103, 189)")
+	legend2.append("circle").attr("cx", 210).attr("cy", 30).attr("r", 5.5).style("fill", "rgb(140, 86, 75)")
+	legend2.append("circle").attr("cx", 410).attr("cy", 30).attr("r", 5.5).style("fill", "rgb(214, 39, 40)")
+	legend2.append("circle").attr("cx", 10).attr("cy", 60).attr("r", 5.5).style("fill", "rgb(44, 160, 44)")
+	legend2.append("circle").attr("cx", 210).attr("cy", 60).attr("r", 5.5).style("fill", "rgb(255, 127, 14)")
+	legend2.append("circle").attr("cx", 410).attr("cy", 60).attr("r", 5.5).style("fill", "rgb(31, 119, 180)")
+
+	legend2.append("text").attr("x", 30).attr("y", 30).text("NORTH AMERICA").style("font-size", "15px").attr("alignment-baseline", "middle").style("fill", "white")
+	legend2.append("text").attr("x", 230).attr("y", 30).text("SOUTH AMERICA").style("font-size", "15px").attr("alignment-baseline", "middle").style("fill", "white")
+	legend2.append("text").attr("x", 430).attr("y", 30).text("EUROPE").style("font-size", "15px").attr("alignment-baseline", "middle").style("fill", "white")
+	legend2.append("text").attr("x", 30).attr("y", 60).text("ASIA & PACIFIC").style("font-size", "15px").attr("alignment-baseline", "middle").style("fill", "white")
+	legend2.append("text").attr("x", 230).attr("y", 60).text("ARAB STATE").style("font-size", "15px").attr("alignment-baseline", "middle").style("fill", "white")
+	legend2.append("text").attr("x", 430).attr("y", 60).text("AFRICA").style("font-size", "15px").attr("alignment-baseline", "middle").style("fill", "white")
+
 	
 
 </script>
